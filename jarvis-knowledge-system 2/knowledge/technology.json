@@ -1,0 +1,9 @@
+{
+  "artificial intelligence": "AI is the simulation of human intelligence by computer systems. Includes machine learning, deep learning, natural language processing, and computer vision.",
+  "python": "Python is a high-level, interpreted programming language created by Guido van Rossum in 1991. Known for readability and extensive standard library.",
+  "machine learning": "ML is a subset of AI where systems learn from data without explicit programming. Types: supervised, unsupervised, reinforcement learning.",
+  "neural network": "Computing systems inspired by biological neural networks. Consist of layers of interconnected nodes (neurons) with weighted connections.",
+  "blockchain": "A decentralized, distributed digital ledger that records transactions across many computers. Underpins cryptocurrencies like Bitcoin.",
+  "quantum computing": "Computing using quantum-mechanical phenomena like superposition and entanglement. Uses qubits instead of classical bits.",
+  "iron man suit": "The Iron Man suit is powered by an Arc Reactor. Features repulsor beams, flight thrusters, AI assistance (me), and weapon systems. First built Mark I in a cave."
+}
