@@ -5896,7 +5896,7 @@ saveConvs = function() {
       showTyping();
 
       if (useAPI) {
-        var apiMessages = conv.messages.slice(-20).map(function(m){ return {role:m.role,content:m.content}; });
+        var apiMessages = conv.messages.slice(-20).map(function(m){ return {role:m.role==='jarvis'?'assistant':m.role,content:m.content}; });
         callOpenAI(apiMessages).then(function(reply) {
           hudModel.textContent = getEndpointName(state.apiEndpoint) + ' connected';
           finishSend(reply);
