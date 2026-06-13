@@ -1057,29 +1057,6 @@ saveConvs = function() {
         .replace(/\*(.+?)\*/g, '<i>$1</i>');
     }
 
-      'doctor strange':'Doctor Strange', 'spider-man':'Spider-Man', 'spiderman':'Spider-Man',
-      'star-lord':'Star-Lord', 'star lord':'Star-Lord', 'gamora':'Gamora',
-      'drax':'Drax', 'rocket':'Rocket', 'groot':'Groot', 'mantis':'Mantis',
-      'nebula':'Nebula', 'vision':'Vision', 'scarlet witch':'Scarlet Witch',
-      'wanda':'Wanda', 'falcon':'Falcon', 'winter soldier':'Winter Soldier',
-      'bucky':'Bucky', 'ant-man':'Ant-Man', 'ant man':'Ant-Man', 'wasp':'Wasp',
-      'hulk':'Hulk', 'hulkbuster':'Hulkbuster', 'hulk buster':'Hulkbuster',
-      'mark i':'Mark I', 'mark ii':'Mark II', 'mark iii':'Mark III',
-      'mark iv':'Mark IV', 'mark v':'Mark V', 'mark vi':'Mark VI',
-      'mark vii':'Mark VII', 'mark xxxix':'Mark XXXIX', 'mark xl':'Mark XL',
-      'mark l':'Mark L', 'mark lxxxv':'Mark LXXXV',
-      'new york':'New York', 'new york city':'New York City',
-      'los angeles':'Los Angeles', 'san francisco':'San Francisco',
-      'washington':'Washington', 'washington dc':'Washington DC',
-      'london':'London', 'paris':'Paris', 'tokyo':'Tokyo',
-      'beijing':'Beijing', 'moscow':'Moscow', 'sydney':'Sydney',
-      'india':'India', 'china':'China', 'japan':'Japan', 'russia':'Russia',
-      'united states':'United States', 'usa':'USA', 'uk':'UK',
-      'queens':'Queens', 'brooklyn':'Brooklyn', 'manhattan':'Manhattan',
-      'sokovia':'Sokovia', 'wakanda':'Wakanda', 'asgard':'Asgard',
-      'xandar':'Xandar', 'titan':'Titan', 'knowhere':'Knowhere'
-    };
-
     function capitalizeEntities(str) {
       return str;
     }
@@ -2852,15 +2829,11 @@ saveConvs = function() {
         var added = {};
 
         // Add conversation topics
-        var allTopics = [];
         for (var ck in state.conversations) {
           var c = state.conversations[ck];
           if (c && c.name && !added[c.name]) {
             nodes.push({ id: c.name, label: c.name, type: 'topic', x: 0, y: 0, vx: 0, vy: 0, r: 8 });
             added[c.name] = true;
-          }
-        }
-            kCount++;
           }
         }
 
@@ -3247,7 +3220,7 @@ saveConvs = function() {
           w.messages[w.messages.length - 1].content = 'Please configure an AI endpoint in Settings, sir.';
         }
       }
-      } else if (resp && resp.type === 'exit') {
+      if (resp && resp.type === 'exit') {
         doExit();
       }
     }
